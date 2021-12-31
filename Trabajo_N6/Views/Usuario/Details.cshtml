@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Trabajo_N6.Models.usuario>
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<h2>Detalle</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Usuario
+        </th>
+        <th>
+            Estado
+        </th>
+        <th>
+            LogIn
+        </th>
+        <th>
+            LogOut
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in @ViewBag.details)
+    {
+        <tr>
+            <td>
+                @item.Id
+            </td>
+            <td>
+                @item.Usuario1
+            </td>
+            <td>
+                @item.Activo
+            </td>
+            <td>
+                @item.InsertDateUsuario
+            </td>
+            <td>
+                @item.UpdateUsuario
+            </td>
+            <td>
+                @item.Ip
+            </td>
+            <td>
+                @*@Html.ActionLink("Editar", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Detalle", "Details", new { id = item.id }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.id })*@
+            </td>
+        </tr>
+    }
+
+</table>
